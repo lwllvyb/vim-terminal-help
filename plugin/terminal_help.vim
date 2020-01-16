@@ -141,8 +141,7 @@ function! TerminalClose()
 	call win_gotoid(sid)
 	if wid != winnr()
 		let uid = win_getid()
-		exec "normal ". wid . "\<c-w>w"
-		close
+		exec "close ". bid
 		call win_gotoid(uid)
 	else
 		close
